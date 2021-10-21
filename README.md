@@ -1,11 +1,7 @@
-## My Project
+## Construct Hub Probe
 
-TODO: Fill this README out!
-
-Be sure to:
-
-* Change the title in this README
-* Edit your repository description on GitHub
+This repository contains a package intended to be used a probe to test construct hub instances.
+It automatically publishes a new version every 2 hours, allowing for construct hub canaries to verify its availability on construct hub instances.
 
 ## Security
 
