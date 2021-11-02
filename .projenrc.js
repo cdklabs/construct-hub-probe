@@ -10,6 +10,7 @@ const project = new JsiiProject({
   defaultReleaseBranch: 'main',
   name: 'construct-hub-probe',
   releaseToNpm: false,
+  minNodeVersion: '14.15.0',
   repositoryUrl: 'https://github.com/cdklabs/construct-hub-probe.git',
   peerDeps: [
     'constructs',
