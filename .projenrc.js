@@ -9,7 +9,7 @@ const project = new JsiiProject({
   projenUpgradeSecret: 'PROJEN_GITHUB_TOKEN',
   defaultReleaseBranch: 'main',
   name: 'construct-hub-probe',
-  releaseToNpm: false,
+  releaseToNpm: true,
   minNodeVersion: '14.15.0',
   repositoryUrl: 'https://github.com/cdklabs/construct-hub-probe.git',
   peerDeps: [

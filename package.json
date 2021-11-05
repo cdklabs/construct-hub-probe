@@ -15,6 +15,7 @@
     "eslint": "npx projen eslint",
     "package": "npx projen package",
     "publish:github": "npx projen publish:github",
+    "publish:npm": "npx projen publish:npm",
     "release": "npx projen release",
     "test": "npx projen test",
     "test:update": "npx projen test:update",
