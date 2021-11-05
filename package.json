@@ -59,6 +59,12 @@
     "constructs": "^10.0.9"
   },
   "bundledDependencies": [],
+  "keywords": [
+    "construct-hub",
+    "construct-hub/hide-from-search",
+    "dummy",
+    "probe"
+  ],
   "engines": {
     "node": ">= 14.15.0"
   },

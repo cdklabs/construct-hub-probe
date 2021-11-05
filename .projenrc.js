@@ -21,6 +21,12 @@ const project = new JsiiProject({
     secret: 'GITHUB_TOKEN',
   },
   autoApproveUpgrades: true,
+  keywords: [
+    'construct-hub',
+    'probe',
+    'dummy',
+    'construct-hub/hide-from-search',
+  ],
 });
 
 const bump = project.github.addWorkflow('auto-commit');
