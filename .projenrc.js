@@ -1,9 +1,9 @@
-const { JsiiProject } = require('projen');
+const { cdk } = require('projen');
 const { JobPermission } = require('projen/lib/github/workflows-model');
 
 const RELEASE_EVERY_HOURS = 3;
 
-const project = new JsiiProject({
+const project = new cdk.JsiiProject({
   author: 'Amazon Web Services, Inc.',
   authorAddress: 'construct-ecosystem-team@amazon.com',
   projenUpgradeSecret: 'PROJEN_GITHUB_TOKEN',
