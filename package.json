@@ -34,7 +34,7 @@
   },
   "devDependencies": {
     "@types/jest": "^26.0.24",
-    "@types/node": "^14.15.0",
+    "@types/node": "^14.17.0",
     "@typescript-eslint/eslint-plugin": "^5",
     "@typescript-eslint/parser": "^5",
     "aws-cdk-lib": "^2.0.0",
@@ -68,7 +68,7 @@
     "probe"
   ],
   "engines": {
-    "node": ">= 14.15.0"
+    "node": ">= 14.17.0"
   },
   "main": "lib/index.js",
   "license": "Apache-2.0",
