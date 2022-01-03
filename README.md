@@ -11,3 +11,10 @@ See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more inform
 
 This project is licensed under the Apache-2.0 License.
 
+## test
+
+<pre lang="typescript">
+import { Bucket } from '@aws-cdk/aws-s3'
+
+new Bucket(scope: Construct, id: string, props?: BucketProps)
+</pre>
