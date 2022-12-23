@@ -39,7 +39,7 @@
     "@typescript-eslint/eslint-plugin": "^5",
     "@typescript-eslint/parser": "^5",
     "aws-cdk-lib": "^2.56.0",
-    "constructs": "^10.1.196",
+    "constructs": "^10.1.197",
     "eslint": "^8",
     "eslint-import-resolver-node": "^0.3.6",
     "eslint-import-resolver-typescript": "^2.7.1",
@@ -52,14 +52,14 @@
     "jsii-pacmak": "^1.72.0",
     "json-schema": "^0.4.0",
     "npm-check-updates": "^16",
-    "projen": "^0.65.69",
+    "projen": "^0.65.70",
     "standard-version": "^9",
     "ts-jest": "^27",
     "typescript": "^4.9.4"
   },
   "peerDependencies": {
     "aws-cdk-lib": "^2.56.0",
-    "constructs": "^10.1.196"
+    "constructs": "^10.1.197"
   },
   "keywords": [
     "construct-hub",
