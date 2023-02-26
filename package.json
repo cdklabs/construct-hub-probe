@@ -39,7 +39,7 @@
     "@typescript-eslint/eslint-plugin": "^5",
     "@typescript-eslint/parser": "^5",
     "aws-cdk-lib": "^2.66.1",
-    "constructs": "^10.1.259",
+    "constructs": "^10.1.260",
     "eslint": "^8",
     "eslint-import-resolver-node": "^0.3.7",
     "eslint-import-resolver-typescript": "^2.7.1",
@@ -58,7 +58,7 @@
   },
   "peerDependencies": {
     "aws-cdk-lib": "^2.66.1",
-    "constructs": "^10.1.259"
+    "constructs": "^10.1.260"
   },
   "keywords": [
     "construct-hub",
