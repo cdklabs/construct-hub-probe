@@ -39,26 +39,26 @@
     "@typescript-eslint/eslint-plugin": "^5",
     "@typescript-eslint/parser": "^5",
     "aws-cdk-lib": "^2.67.0",
-    "constructs": "^10.1.268",
+    "constructs": "^10.1.269",
     "eslint": "^8",
     "eslint-import-resolver-node": "^0.3.7",
     "eslint-import-resolver-typescript": "^2.7.1",
     "eslint-plugin-import": "^2.27.5",
     "jest": "^27",
     "jest-junit": "^13",
-    "jsii": "^1.76.0",
-    "jsii-diff": "^1.76.0",
+    "jsii": "^1.77.0",
+    "jsii-diff": "^1.77.0",
     "jsii-docgen": "^3.8.31",
-    "jsii-pacmak": "^1.76.0",
+    "jsii-pacmak": "^1.77.0",
     "npm-check-updates": "^16",
-    "projen": "^0.67.73",
+    "projen": "^0.67.74",
     "standard-version": "^9",
     "ts-jest": "^27",
     "typescript": "^4.9.5"
   },
   "peerDependencies": {
     "aws-cdk-lib": "^2.67.0",
-    "constructs": "^10.1.268"
+    "constructs": "^10.1.269"
   },
   "keywords": [
     "construct-hub",
