@@ -1,9 +1,9 @@
-import { cdk } from 'projen';
+import { CdklabsJsiiProject } from 'cdklabs-projen-project-types';
 import { JobPermission } from 'projen/lib/github/workflows-model';
 
 const RELEASE_EVERY_HOURS = 3;
 
-const project = new cdk.JsiiProject({
+const project = new CdklabsJsiiProject({
   author: 'Amazon Web Services, Inc.',
   projenrcTs: true,
   authorAddress: 'construct-ecosystem-team@amazon.com',
@@ -16,6 +16,10 @@ const project = new cdk.JsiiProject({
     'constructs',
     'aws-cdk-lib',
   ],
+  devDeps: [
+    'cdklabs-projen-project-types',
+  ],
+  jsiiTargetLanguages: [],
   autoApproveOptions: {
     allowedUsernames: ['cdklabs-automation'],
     secret: 'GITHUB_TOKEN',
