@@ -1,12 +1,12 @@
-const { cdk } = require('projen');
-const { JobPermission } = require('projen/lib/github/workflows-model');
+import { cdk } from 'projen';
+import { JobPermission } from 'projen/lib/github/workflows-model';
 
 const RELEASE_EVERY_HOURS = 3;
 
 const project = new cdk.JsiiProject({
   author: 'Amazon Web Services, Inc.',
+  projenrcTs: true,
   authorAddress: 'construct-ecosystem-team@amazon.com',
-  projenUpgradeSecret: 'PROJEN_GITHUB_TOKEN',
   defaultReleaseBranch: 'main',
   name: 'construct-hub-probe',
   releaseToNpm: true,
@@ -29,11 +29,11 @@ const project = new cdk.JsiiProject({
   ],
 });
 
-const bump = project.github.addWorkflow('auto-commit');
+const bump = project.github!.addWorkflow('auto-commit');
 bump.on({ schedule: [{ cron: `0 */${RELEASE_EVERY_HOURS} * * *` }], workflowDispatch: {} });
 bump.addJobs({
   bump: {
-    runsOn: 'ubuntu-latest',
+    runsOn: ['ubuntu-latest'],
     permissions: {
       contents: JobPermission.READ,
     },
