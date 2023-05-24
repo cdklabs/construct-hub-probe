@@ -6,11 +6,14 @@ const RELEASE_EVERY_HOURS = 3;
 const project = new CdklabsJsiiProject({
   author: 'Amazon Web Services, Inc.',
   projenrcTs: true,
+  private: false,
   authorAddress: 'construct-ecosystem-team@amazon.com',
   defaultReleaseBranch: 'main',
   name: 'construct-hub-probe',
   releaseToNpm: true,
-  minNodeVersion: '14.18.0',
+  minNodeVersion: '16.0.0',
+  workflowNodeVersion: '16.x',
+  setNodeEngineVersion: false,
   repositoryUrl: 'https://github.com/cdklabs/construct-hub-probe.git',
   peerDeps: [
     'constructs',
@@ -20,11 +23,7 @@ const project = new CdklabsJsiiProject({
     'cdklabs-projen-project-types',
   ],
   jsiiTargetLanguages: [],
-  autoApproveOptions: {
-    allowedUsernames: ['cdklabs-automation'],
-    secret: 'GITHUB_TOKEN',
-  },
-  autoApproveUpgrades: true,
+  enablePRAutoMerge: true,
   keywords: [
     'construct-hub',
     'probe',
