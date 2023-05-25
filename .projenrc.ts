@@ -1,26 +1,29 @@
-const { cdk } = require('projen');
-const { JobPermission } = require('projen/lib/github/workflows-model');
+import { CdklabsJsiiProject } from 'cdklabs-projen-project-types';
+import { JobPermission } from 'projen/lib/github/workflows-model';
 
 const RELEASE_EVERY_HOURS = 3;
 
-const project = new cdk.JsiiProject({
+const project = new CdklabsJsiiProject({
   author: 'Amazon Web Services, Inc.',
+  projenrcTs: true,
+  private: false,
   authorAddress: 'construct-ecosystem-team@amazon.com',
-  projenUpgradeSecret: 'PROJEN_GITHUB_TOKEN',
   defaultReleaseBranch: 'main',
   name: 'construct-hub-probe',
   releaseToNpm: true,
-  minNodeVersion: '14.18.0',
+  minNodeVersion: '16.0.0',
+  workflowNodeVersion: '16.x',
+  setNodeEngineVersion: false,
   repositoryUrl: 'https://github.com/cdklabs/construct-hub-probe.git',
   peerDeps: [
     'constructs',
     'aws-cdk-lib',
   ],
-  autoApproveOptions: {
-    allowedUsernames: ['cdklabs-automation'],
-    secret: 'GITHUB_TOKEN',
-  },
-  autoApproveUpgrades: true,
+  devDeps: [
+    'cdklabs-projen-project-types',
+  ],
+  jsiiTargetLanguages: [],
+  enablePRAutoMerge: true,
   keywords: [
     'construct-hub',
     'probe',
@@ -29,11 +32,15 @@ const project = new cdk.JsiiProject({
   ],
 });
 
+if (!project.github) {
+  throw new Error('project.github is undefined. This would only happen if the project is a subproject, which it shouldn\'t be.');
+}
+
 const bump = project.github.addWorkflow('auto-commit');
 bump.on({ schedule: [{ cron: `0 */${RELEASE_EVERY_HOURS} * * *` }], workflowDispatch: {} });
 bump.addJobs({
   bump: {
-    runsOn: 'ubuntu-latest',
+    runsOn: ['ubuntu-latest'],
     permissions: {
       contents: JobPermission.READ,
     },
