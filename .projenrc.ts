@@ -32,7 +32,11 @@ const project = new CdklabsJsiiProject({
   ],
 });
 
-const bump = project.github!.addWorkflow('auto-commit');
+if (!project.github) {
+  throw new Error('project.github is undefined. This would only happen if the project is a subproject, which it shouldn\'t be.');
+}
+
+const bump = project.github.addWorkflow('auto-commit');
 bump.on({ schedule: [{ cron: `0 */${RELEASE_EVERY_HOURS} * * *` }], workflowDispatch: {} });
 bump.addJobs({
   bump: {
