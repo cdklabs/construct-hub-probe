@@ -22,7 +22,6 @@
     "pre-compile": "npx projen pre-compile",
     "release": "npx projen release",
     "test": "npx projen test",
-    "test:update": "npx projen test:update",
     "test:watch": "npx projen test:watch",
     "unbump": "npx projen unbump",
     "upgrade": "npx projen upgrade",
@@ -41,8 +40,8 @@
     "@typescript-eslint/eslint-plugin": "^5",
     "@typescript-eslint/parser": "^5",
     "aws-cdk-lib": "^2.82.0",
-    "cdklabs-projen-project-types": "^0.1.123",
-    "constructs": "^10.2.43",
+    "cdklabs-projen-project-types": "^0.1.125",
+    "constructs": "^10.2.44",
     "eslint": "^8",
     "eslint-import-resolver-node": "^0.3.7",
     "eslint-import-resolver-typescript": "^2.7.1",
@@ -54,7 +53,7 @@
     "jsii-docgen": "^3.8.31",
     "jsii-pacmak": "^1.82.0",
     "npm-check-updates": "^16",
-    "projen": "^0.71.82",
+    "projen": "^0.71.84",
     "standard-version": "^9",
     "ts-jest": "^27",
     "ts-node": "^10.9.1",
@@ -62,7 +61,7 @@
   },
   "peerDependencies": {
     "aws-cdk-lib": "^2.82.0",
-    "constructs": "^10.2.43"
+    "constructs": "^10.2.44"
   },
   "resolutions": {
     "@types/babel__traverse": "7.18.2",
