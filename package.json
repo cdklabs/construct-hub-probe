@@ -40,8 +40,8 @@
     "@typescript-eslint/eslint-plugin": "^5",
     "@typescript-eslint/parser": "^5",
     "aws-cdk-lib": "^2.83.1",
-    "cdklabs-projen-project-types": "^0.1.131",
-    "constructs": "^10.2.47",
+    "cdklabs-projen-project-types": "^0.1.132",
+    "constructs": "^10.2.48",
     "eslint": "^8",
     "eslint-import-resolver-node": "^0.3.7",
     "eslint-import-resolver-typescript": "^2.7.1",
@@ -53,7 +53,7 @@
     "jsii-docgen": "^3.8.31",
     "jsii-pacmak": "^1.83.0",
     "npm-check-updates": "^16",
-    "projen": "^0.71.88",
+    "projen": "^0.71.89",
     "standard-version": "^9",
     "ts-jest": "^27",
     "ts-node": "^10.9.1",
@@ -61,7 +61,7 @@
   },
   "peerDependencies": {
     "aws-cdk-lib": "^2.83.1",
-    "constructs": "^10.2.47"
+    "constructs": "^10.2.48"
   },
   "resolutions": {
     "@types/babel__traverse": "7.18.2",
