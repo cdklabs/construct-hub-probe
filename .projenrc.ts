@@ -37,6 +37,7 @@ if (!project.github) {
 }
 
 const bump = project.github.addWorkflow('auto-commit');
+const commitMessage = 'feat: auto commit to trigger new release';
 bump.on({ schedule: [{ cron: `0 */${RELEASE_EVERY_HOURS} * * *` }], workflowDispatch: {} });
 bump.addJobs({
   bump: {
@@ -57,10 +58,11 @@ bump.addJobs({
         name: 'Create Pull Request',
         uses: 'peter-evans/create-pull-request@v3',
         with: {
-          token: '${{ secrets.PROJEN_GITHUB_TOKEN }}',
-          branch: 'github-actions/auto-commit',
-          title: 'feat: auto commit to trigger new release',
-          labels: 'auto-approve',
+          'token': '${{ secrets.PROJEN_GITHUB_TOKEN }}',
+          'commit-message': commitMessage,
+          'branch': 'github-actions/auto-commit',
+          'title': commitMessage,
+          'labels': 'auto-approve',
         },
       },
     ],
