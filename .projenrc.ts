@@ -59,7 +59,7 @@ bump.addJobs({
         with: {
           token: '${{ secrets.PROJEN_GITHUB_TOKEN }}',
           branch: 'github-actions/auto-commit',
-          title: 'chore: auto commit to trigger new release',
+          title: 'feat: auto commit to trigger new release',
           labels: 'auto-approve',
         },
       },
