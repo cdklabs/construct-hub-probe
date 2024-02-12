@@ -11,8 +11,8 @@ const project = new CdklabsJsiiProject({
   defaultReleaseBranch: 'main',
   name: 'construct-hub-probe',
   releaseToNpm: true,
-  minNodeVersion: '16.0.0',
-  workflowNodeVersion: '16.x',
+  minNodeVersion: '18.12.0',
+  workflowNodeVersion: '18.x',
   setNodeEngineVersion: false,
   repositoryUrl: 'https://github.com/cdklabs/construct-hub-probe.git',
   peerDeps: [
