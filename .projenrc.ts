@@ -12,7 +12,7 @@ const project = new CdklabsJsiiProject({
   name: 'construct-hub-probe',
   releaseToNpm: true,
   minNodeVersion: '18.12.0',
-  workflowNodeVersion: '18.x',
+  workflowNodeVersion: '24.x',
   setNodeEngineVersion: false,
   repositoryUrl: 'https://github.com/cdklabs/construct-hub-probe.git',
   peerDeps: [
