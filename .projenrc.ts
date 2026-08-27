@@ -36,6 +36,12 @@ if (!project.github) {
   throw new Error('project.github is undefined. This would only happen if the project is a subproject, which it shouldn\'t be.');
 }
 
+project.github.tryFindWorkflow('auto-queue')?.on({
+  pullRequestTarget: {
+    types: ['opened', 'reopened', 'ready_for_review', 'synchronize'],
+  },
+});
+
 const bump = project.github.addWorkflow('auto-commit');
 const commitMessage = 'feat: auto commit to trigger new release';
 bump.on({ schedule: [{ cron: `0 */${RELEASE_EVERY_HOURS} * * *` }], workflowDispatch: {} });
