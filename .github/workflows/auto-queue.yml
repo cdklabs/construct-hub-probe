@@ -8,6 +8,9 @@ on:
       - reopened
       - ready_for_review
       - synchronize
+      - edited
+    branches:
+      - main
 jobs:
   enableAutoQueue:
     name: "Set AutoQueue on PR #${{ github.event.number }}"

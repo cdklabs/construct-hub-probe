@@ -38,7 +38,8 @@ if (!project.github) {
 
 project.github.tryFindWorkflow('auto-queue')?.on({
   pullRequestTarget: {
-    types: ['opened', 'reopened', 'ready_for_review', 'synchronize'],
+    types: ['opened', 'reopened', 'ready_for_review', 'synchronize', 'edited'],
+    branches: ['main'],
   },
 });
 
