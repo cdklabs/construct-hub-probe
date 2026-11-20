@@ -4,6 +4,8 @@
 
 ### SampleRepository <a name="SampleRepository" id="construct-hub-probe.SampleRepository"></a>
 
+- *Implements:* constructs.IConstruct, constructs.IDependable
+
 SampleRepository is a repository that only allows configuring its.
 
 #### Initializers <a name="Initializers" id="construct-hub-probe.SampleRepository.Initializer"></a>
