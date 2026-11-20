@@ -12,10 +12,13 @@ jobs:
       contents: read
     steps:
       - name: Checkout
+        id: checkout
         uses: actions/checkout@v2
       - name: Bump
+        id: bump
         run: echo $(date -Is) > commit.date
       - name: Create Pull Request
+        id: create_pull_request
         uses: peter-evans/create-pull-request@v3
         with:
           token: ${{ secrets.PROJEN_GITHUB_TOKEN }}
